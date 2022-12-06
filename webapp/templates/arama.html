@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Elastic Search - Search Page</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="assets/style/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="assets/style/css/style.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="assets/style/css/ie7.css" media="all">
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="assets/style/css/ie8.css" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="assets/style/css/ie9.css" media="all">
+<![endif]-->
+<script src="assets/style/js/jquery-1.6.4.min.js"></script>
+<script src="assets/style/js/ddsmoothmenu.js"></script>
+<script src="assets/style/js/jquery.jcarousel.js"></script>
+<script src="assets/style/js/jquery.prettyPhoto.js"></script>
+<script src="assets/style/js/carousel.js"></script>
+<script src="assets/style/js/jquery.flexslider-min.js"></script>
+<script src="assets/style/js/jquery.masonry.min.js"></script>
+<script src="assets/style/js/jquery.slickforms.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="sidebar">
+    <div id="logo"><a href="https://www.lse.ac.uk/PBS/People/Professor-Ahmet-Suerdem"><img src="assets/style/images/logo_aa3.png" alt=""></a></div>
+    <div id="menu" class="menu-v">
+      <ul>
+           <li><a href="http://85.105.63.196:8004" class="active">BG-TR</a>
+<!--          <ul>-->
+<!--            <li><a href="index.html">Home w/ Carousel</a></li>-->
+<!--            <li><a href="index2.html">Home w/ Portfolio</a></li>-->
+<!--            <li><a href="index3.html">Home w/ Testimonials</a></li>-->
+<!--          </ul>-->
+        </li>
+        <li><a href="index" class="active">Home</a>
+<!--          <ul>-->
+<!--            <li><a href="index.html">Home w/ Carousel</a></li>-->
+<!--            <li><a href="index2.html">Home w/ Portfolio</a></li>-->
+<!--            <li><a href="index3.html">Home w/ Testimonials</a></li>-->
+<!--          </ul>-->
+        </li>
+<!--        <li><a href="#">Convert ...</a>-->
+<!--&lt;!&ndash;          <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a href="csv_to_jsonl_html">Csv to Jsonl</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a href="json_to_jsonl_html">Json to Jsonl</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a href="tojson_html">Txt to Jsonl</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a href="label_patterns_html">Label and Patterns to Jsonl</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a href="portfolio-post.html">Portfolio Post</a></li>&ndash;&gt;-->
+<!--          </ul>-->
+<!--        </li>-->
+            <li><a href="rss_get_news">Crawl RSS</a></li>
+          <li><a href="txt_to_elastica">Txt2elastic</a></li>
+        <li><a href="arama">Search - Elastic</a>
+<!--          <ul>-->
+<!--            <li><a href="blog.html">Blog</a></li>-->
+<!--            <li><a href="blog2.html">Blog w/ Sidebar</a></li>-->
+<!--            <li><a href="post.html">Post</a></li>-->
+<!--            <li><a href="post2.html">Post w/ Sidebar</a></li>-->
+<!--          </ul>-->
+        </li>
+<!--         <li><a href="s_index_download">Download Dataset</a>-->
+
+<!--        </li>-->
+<!--        <li><a href="work_page_html">Work Page</a>-->
+
+<!--        </li>-->
+        <li><a href="newspaper_get_news">Crawl Newspapers</a></li>
+        <li><a href="contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="sidebox">
+      <ul class="share">
+        <li><a href="https://bilgi.academia.edu/AhmetSuerdem"><img src="assets/style/images/icon-rss.png" alt=""></a></li>
+        <li><a href="#"><img src="assets/style/images/icon-facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="assets/style/images/icon-twitter.png" alt=""></a></li>
+        <li><a href="#"><img src="assets/style/images/icon-dribbble.png" alt=""></a></li>
+        <li><a href="https://tr.linkedin.com/in/ahmet-suerdem-4604b92"><img src="assets/style/images/icon-linkedin.png" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="sidebox" style="color:#FFF;">
+      <p style="margin-bottom:5px;">Copyright &copy; asuerdem</p>
+      <p>Design By: <a href="http://85.105.63.196:8008/">asuerdem</a></p>
+    </div>
+  </div>
+
+  <div id="content">
+
+    <form method="get">
+    {% csrf_token %}
+    <input id='q' name='q' type='text' placeholder='search keyword...'>
+
+</form>
+
+{% for item in posts %}
+<!--{% csrf_token %}-->
+    {{item.id}}<br>
+{{item.link}}<br>
+{{item.date}}<br>
+{{item.title}}
+<br>
+{{item.content}}
+<br>
+{%endfor%}
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form method="get">-->
+<!--    {% csrf_token %}-->
+<!--    <input id='q' name='q' type='text' placeholder='search keyword...'>-->
+
+<!--</form>-->
+<!--{% for item in posts_e %}-->
+<!--&lt;!&ndash;{% csrf_token %}&ndash;&gt;-->
+<!--    {{item.id}}<br>-->
+<!--{{item.link}}<br>-->
+<!--{{item.date}}<br>-->
+<!--{{item.title}}-->
+<!--<br>-->
+<!--{{item.content}}-->
+<!--<br>-->
+<!--{%endfor%}-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,15 @@
+django
+requests
+bs4
+lxml
+feedparser
+pandas
+hjson
+srsly
+numpy
+wget
+json_normalize
+elasticsearch
+django_elasticsearch_dsl_drf
+celery
+pip install django-feed-reader

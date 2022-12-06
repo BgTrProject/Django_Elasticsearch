@@ -1,0 +1,46 @@
+.row{
+ba
+
+}
+.page{
+    display:flex;
+
+}
+
+.leftside{
+
+    height:1200px;
+    width:200px;
+    background:grey;
+}
+.rightside{
+
+
+    position:absolute;
+    left:203px;
+    background:white;
+}
+
+.end_rightside{
+
+    position:absolute;
+    left:902px;
+    background:gray;
+}
+
+
+
+
+
+
+.form-control {
+  width: 300px;
+  height: 45px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
