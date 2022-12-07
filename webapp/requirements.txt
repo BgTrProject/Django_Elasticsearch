@@ -12,4 +12,12 @@ json_normalize
 elasticsearch
 django_elasticsearch_dsl_drf
 celery
-pip install django-feed-reader
+django-feed-reader
+cloudscraper
+html5lib
+selenium
+webdriver_manager
+unidecode
+fake_useragent
+news-please
+redis
